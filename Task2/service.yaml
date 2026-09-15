@@ -1,0 +1,17 @@
+# NodePort, чтобы до приложения можно было достучаться снаружи кластера:
+# minikube service scaletestapp --url
+apiVersion: v1
+kind: Service
+metadata:
+  name: scaletestapp
+  labels:
+    app: scaletestapp
+spec:
+  type: NodePort
+  selector:
+    app: scaletestapp
+  ports:
+    - name: http
+      port: 8080
+      targetPort: http
+      nodePort: 30080
