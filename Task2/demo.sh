@@ -20,7 +20,16 @@ log "Применяю манифесты"
 kubectl apply -f deployment.yaml -f service.yaml -f hpa.yaml
 kubectl rollout status deployment/scaletestapp --timeout=180s
 
-URL="$(minikube service scaletestapp --url | head -n1)"
+# На macOS с docker-драйвером minikube service держит туннель в foreground, поэтому запускаю в фоне и читаю URL из вывода.
+minikube service scaletestapp --url > logs/00_service_url.log 2>&1 &
+TUN=$!
+URL=""
+for _ in $(seq 1 30); do
+  URL="$(grep -oE 'http://[0-9.]+:[0-9]+' logs/00_service_url.log | head -n1 || true)"
+  [ -n "$URL" ] && break
+  sleep 1
+done
+[ -n "$URL" ] || { echo "Не получил URL сервиса, смотри logs/00_service_url.log"; exit 1; }
 log "Приложение доступно по $URL"
 curl -s "$URL/" || true
 
@@ -50,7 +59,7 @@ W2=$!
   done
 ) > logs/04_top_every_15s.log 2>&1 &
 W3=$!
-trap 'kill $W1 $W2 $W3 2>/dev/null || true' EXIT
+trap 'kill $W1 $W2 $W3 $TUN 2>/dev/null || true' EXIT
 
 log "Нагрузка: $USERS пользователей, +$SPAWN/с, $DURATION"
 locust -f locustfile.py --headless -u "$USERS" -r "$SPAWN" -t "$DURATION" \
