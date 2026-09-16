@@ -1,0 +1,68 @@
+# GraphQL-схема сервиса client-info.
+# Заменяет REST-контракт v1 (GET /clients/{id}, /clients/{id}/documents, /clients/{id}/relatives).
+# Идея: один запрос, в котором потребитель сам перечисляет нужные объекты и поля,
+# вместо нескольких ресурсов и переноса всей карточки клиента целиком.
+
+scalar Date
+
+"Клиент. Базовые поля соответствуют объекту Client из REST-контракта."
+type Client {
+  id: ID!
+  name: String!
+  age: Int
+
+  "Документы клиента. Аналог GET /clients/{id}/documents. activeOnly отсекает документы с истёкшим expiryDate."
+  documents(type: DocumentType, activeOnly: Boolean = false): [Document!]!
+
+  "Родственники клиента. Аналог GET /clients/{id}/relatives."
+  relatives(relationType: RelationType): [Relative!]!
+}
+
+"Документ клиента. Поля повторяют объект Document из REST-контракта."
+type Document {
+  id: ID!
+  type: DocumentType!
+  number: String!
+  issueDate: Date
+  expiryDate: Date
+}
+
+"Родственник клиента. Поля повторяют объект Relative из REST-контракта."
+type Relative {
+  id: ID!
+  relationType: RelationType!
+  name: String!
+  age: Int
+}
+
+"Типы документов. В REST-контракте поле type описано как строка без списка значений, здесь перечисление, чтобы потребители не держали свои списки."
+enum DocumentType {
+  PASSPORT
+  INTERNATIONAL_PASSPORT
+  DRIVER_LICENSE
+  SNILS
+  INN
+  OTHER
+}
+
+enum RelationType {
+  SPOUSE
+  CHILD
+  PARENT
+  SIBLING
+  OTHER
+}
+
+type Query {
+  "Карточка клиента по идентификатору. Покрывает все три GET-ресурса REST-контракта: вложенные документы и родственники запрашиваются в том же запросе."
+  client(id: ID!): Client
+
+  "Несколько клиентов за один запрос: ins-comp-settlement при формировании реестра работает со списком клиентов, а не с одним."
+  clients(ids: [ID!]!): [Client!]!
+
+  "Документы клиента отдельным запросом. Прямой аналог GET /clients/{id}/documents, оставлен на время миграции потребителей один в один."
+  clientDocuments(clientId: ID!, type: DocumentType): [Document!]!
+
+  "Родственники клиента отдельным запросом. Прямой аналог GET /clients/{id}/relatives, оставлен на время миграции."
+  clientRelatives(clientId: ID!, relationType: RelationType): [Relative!]!
+}

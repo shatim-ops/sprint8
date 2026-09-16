@@ -1,0 +1,52 @@
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-5f49b7bc86-vd5dc   1/1     Running   0          69s
+scaletestapp-5f49b7bc86-vd5dc   0/1     OOMKilled   0          99s
+scaletestapp-5f49b7bc86-vd5dc   0/1     Running     1 (0s ago)   99s
+scaletestapp-5f49b7bc86-vd5dc   1/1     Running     1 (6s ago)   105s
+scaletestapp-5f49b7bc86-vd5dc   0/1     OOMKilled   1 (31s ago)   2m10s
+scaletestapp-5f49b7bc86-vdppg   0/1     Pending     0             0s
+scaletestapp-5f49b7bc86-vdppg   0/1     Pending     0             0s
+scaletestapp-5f49b7bc86-vdppg   0/1     ContainerCreating   0             0s
+scaletestapp-5f49b7bc86-vdppg   0/1     ContainerCreating   0             1s
+scaletestapp-5f49b7bc86-vdppg   0/1     Running             0             1s
+scaletestapp-5f49b7bc86-vd5dc   0/1     CrashLoopBackOff    1 (6s ago)    2m15s
+scaletestapp-5f49b7bc86-vdppg   1/1     Running             0             7s
+scaletestapp-5f49b7bc86-vdppg   1/1     Running             0             7s
+scaletestapp-5f49b7bc86-vd5dc   0/1     Running             2 (12s ago)   2m21s
+scaletestapp-5f49b7bc86-w8s49   0/1     Pending             0             0s
+scaletestapp-5f49b7bc86-b7x28   0/1     Pending             0             0s
+scaletestapp-5f49b7bc86-w8s49   0/1     Pending             0             0s
+scaletestapp-5f49b7bc86-b7x28   0/1     Pending             0             0s
+scaletestapp-5f49b7bc86-w8s49   0/1     ContainerCreating   0             0s
+scaletestapp-5f49b7bc86-b7x28   0/1     ContainerCreating   0             1s
+scaletestapp-5f49b7bc86-vd5dc   1/1     Running             2 (17s ago)   2m26s
+scaletestapp-5f49b7bc86-b7x28   0/1     ContainerCreating   0             1s
+scaletestapp-5f49b7bc86-w8s49   0/1     ContainerCreating   0             1s
+scaletestapp-5f49b7bc86-b7x28   0/1     Running             0             1s
+scaletestapp-5f49b7bc86-w8s49   0/1     Running             0             1s
+scaletestapp-5f49b7bc86-w8s49   1/1     Running             0             7s
+scaletestapp-5f49b7bc86-b7x28   1/1     Running             0             7s
+scaletestapp-5f49b7bc86-w8s49   1/1     Running             0             7s
+scaletestapp-5f49b7bc86-vdppg   0/1     OOMKilled           0             32s
+scaletestapp-5f49b7bc86-vdppg   0/1     Running             1 (1s ago)    32s
+scaletestapp-5f49b7bc86-vdppg   1/1     Running             1 (7s ago)    38s
+scaletestapp-5f49b7bc86-gxcw2   0/1     Pending             0             0s
+scaletestapp-5f49b7bc86-gxcw2   0/1     Pending             0             1s
+scaletestapp-5f49b7bc86-gxcw2   0/1     ContainerCreating   0             1s
+scaletestapp-5f49b7bc86-gxcw2   0/1     ContainerCreating   0             1s
+scaletestapp-5f49b7bc86-gxcw2   0/1     Running             0             1s
+scaletestapp-5f49b7bc86-gxcw2   1/1     Running             0             7s
+scaletestapp-5f49b7bc86-gxcw2   1/1     Running             0             7s
+scaletestapp-5f49b7bc86-5jn8r   0/1     Pending             0             0s
+scaletestapp-5f49b7bc86-lrm87   0/1     Pending             0             0s
+scaletestapp-5f49b7bc86-5jn8r   0/1     Pending             0             0s
+scaletestapp-5f49b7bc86-lrm87   0/1     Pending             0             0s
+scaletestapp-5f49b7bc86-5jn8r   0/1     ContainerCreating   0             0s
+scaletestapp-5f49b7bc86-lrm87   0/1     ContainerCreating   0             0s
+scaletestapp-5f49b7bc86-lrm87   0/1     ContainerCreating   0             0s
+scaletestapp-5f49b7bc86-5jn8r   0/1     ContainerCreating   0             0s
+scaletestapp-5f49b7bc86-lrm87   0/1     Running             0             0s
+scaletestapp-5f49b7bc86-5jn8r   0/1     Running             0             0s
+scaletestapp-5f49b7bc86-5jn8r   1/1     Running             0             5s
+scaletestapp-5f49b7bc86-lrm87   1/1     Running             0             5s
+scaletestapp-5f49b7bc86-lrm87   1/1     Running             0             5s

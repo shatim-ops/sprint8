@@ -1,0 +1,76 @@
+--- 22:29:00
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-5f49b7bc86-vd5dc   1m           4Mi             
+--- 22:29:16
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-5f49b7bc86-vd5dc   1m           4Mi             
+--- 22:29:31
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-5f49b7bc86-vd5dc   1m           4Mi             
+--- 22:29:46
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-5f49b7bc86-vd5dc   1m           4Mi             
+--- 22:30:01
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-5f49b7bc86-vd5dc   29m          29Mi            
+--- 22:30:16
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-5f49b7bc86-vd5dc   29m          29Mi            
+--- 22:30:31
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-5f49b7bc86-vd5dc   29m          29Mi            
+--- 22:30:46
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-5f49b7bc86-vd5dc   29m          29Mi            
+--- 22:31:01
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-5f49b7bc86-b7x28   8m           11Mi            
+scaletestapp-5f49b7bc86-vd5dc   9m           12Mi            
+scaletestapp-5f49b7bc86-vdppg   2m           2Mi             
+scaletestapp-5f49b7bc86-w8s49   9m           12Mi            
+--- 22:31:17
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-5f49b7bc86-b7x28   8m           11Mi            
+scaletestapp-5f49b7bc86-vd5dc   9m           12Mi            
+scaletestapp-5f49b7bc86-vdppg   2m           2Mi             
+scaletestapp-5f49b7bc86-w8s49   9m           12Mi            
+--- 22:31:32
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-5f49b7bc86-b7x28   8m           11Mi            
+scaletestapp-5f49b7bc86-vd5dc   9m           12Mi            
+scaletestapp-5f49b7bc86-vdppg   2m           2Mi             
+scaletestapp-5f49b7bc86-w8s49   9m           12Mi            
+--- 22:31:47
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-5f49b7bc86-b7x28   8m           11Mi            
+scaletestapp-5f49b7bc86-vd5dc   9m           12Mi            
+scaletestapp-5f49b7bc86-vdppg   2m           2Mi             
+scaletestapp-5f49b7bc86-w8s49   9m           12Mi            
+--- 22:32:02
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-5f49b7bc86-b7x28   13m          15Mi            
+scaletestapp-5f49b7bc86-gxcw2   1m           5Mi             
+scaletestapp-5f49b7bc86-vd5dc   13m          14Mi            
+scaletestapp-5f49b7bc86-vdppg   1m           5Mi             
+scaletestapp-5f49b7bc86-w8s49   11m          14Mi            
+--- 22:32:17
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-5f49b7bc86-b7x28   13m          15Mi            
+scaletestapp-5f49b7bc86-gxcw2   1m           5Mi             
+scaletestapp-5f49b7bc86-vd5dc   13m          14Mi            
+scaletestapp-5f49b7bc86-vdppg   1m           5Mi             
+scaletestapp-5f49b7bc86-w8s49   11m          14Mi            
+--- 22:32:32
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-5f49b7bc86-b7x28   13m          15Mi            
+scaletestapp-5f49b7bc86-gxcw2   1m           5Mi             
+scaletestapp-5f49b7bc86-vd5dc   13m          14Mi            
+scaletestapp-5f49b7bc86-vdppg   1m           5Mi             
+scaletestapp-5f49b7bc86-w8s49   11m          14Mi            
+--- 22:32:47
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-5f49b7bc86-b7x28   13m          15Mi            
+scaletestapp-5f49b7bc86-gxcw2   1m           5Mi             
+scaletestapp-5f49b7bc86-vd5dc   13m          14Mi            
+scaletestapp-5f49b7bc86-vdppg   1m           5Mi             
+scaletestapp-5f49b7bc86-w8s49   11m          14Mi            

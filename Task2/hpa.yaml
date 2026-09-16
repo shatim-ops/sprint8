@@ -1,0 +1,34 @@
+# Масштабирование по утилизации памяти: цель 80% от requests, от 1 до 10 реплик.
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: scaletestapp
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: scaletestapp
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+    - type: Resource
+      resource:
+        name: memory
+        target:
+          type: Utilization
+          averageUtilization: 80
+  behavior:
+    scaleUp:
+      # Реагируем на пик сразу: без окна стабилизации, удваиваем реплики раз в 15 с.
+      stabilizationWindowSeconds: 0
+      policies:
+        - type: Percent
+          value: 100
+          periodSeconds: 15
+    scaleDown:
+      # Вниз идём осторожнее, но не дефолтные 5 минут, иначе демонстрацию не дождаться.
+      stabilizationWindowSeconds: 60
+      policies:
+        - type: Pods
+          value: 2
+          periodSeconds: 30

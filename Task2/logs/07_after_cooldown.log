@@ -1,0 +1,13 @@
+=== среда, 16 сентября 2026 г. 22:43:33 (MSK) через 12 минут после нагрузки ===
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 79%/80%   1         10        9          15m
+NAME                            READY   STATUS    RESTARTS      AGE
+scaletestapp-5f49b7bc86-5jn8r   1/1     Running   0             11m
+scaletestapp-5f49b7bc86-b7x28   1/1     Running   0             13m
+scaletestapp-5f49b7bc86-clfhp   1/1     Running   0             10m
+scaletestapp-5f49b7bc86-gxcw2   1/1     Running   0             12m
+scaletestapp-5f49b7bc86-lrm87   1/1     Running   0             11m
+scaletestapp-5f49b7bc86-vd5dc   1/1     Running   2 (13m ago)   15m
+scaletestapp-5f49b7bc86-vdppg   1/1     Running   1 (13m ago)   13m
+scaletestapp-5f49b7bc86-w8s49   1/1     Running   0             13m
+scaletestapp-5f49b7bc86-wdx6p   1/1     Running   0             10m
