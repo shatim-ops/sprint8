@@ -30,7 +30,7 @@ spec:
             # выходило за них.
             requests:
               cpu: 50m
-              memory: 15Mi
+              memory: 6Mi
             limits:
               memory: 30Mi
           readinessProbe:

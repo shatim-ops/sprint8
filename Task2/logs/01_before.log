@@ -1,0 +1,7 @@
+=== среда, 16 сентября 2026 г. 22:16:01 (MSK) до нагрузки ===
+NAME                            READY   STATUS    RESTARTS   AGE   IP           NODE       NOMINATED NODE   READINESS GATES
+scaletestapp-68779d9c77-ngqfj   1/1     Running   0          36s   10.244.0.5   minikube   <none>           <none>
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-68779d9c77-ngqfj   1m           2Mi             
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 17%/80%   1         10        1          6m36s

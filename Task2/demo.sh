@@ -62,7 +62,7 @@ W3=$!
 trap 'kill $W1 $W2 $W3 $TUN 2>/dev/null || true' EXIT
 
 log "Нагрузка: $USERS пользователей, +$SPAWN/с, $DURATION"
-locust -f locustfile.py --headless -u "$USERS" -r "$SPAWN" -t "$DURATION" \
+python3 -m locust -f locustfile.py --headless -u "$USERS" -r "$SPAWN" -t "$DURATION" \
   --host "$URL" --csv logs/locust --only-summary 2>&1 | tee logs/05_locust.log
 
 {
